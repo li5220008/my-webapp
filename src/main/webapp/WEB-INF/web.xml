@@ -28,4 +28,20 @@
         <servlet-name>demo2</servlet-name>
         <url-pattern>/demo2/*</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>randomImg</servlet-name>
+        <servlet-class>RandomImg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>randomImg</servlet-name>
+        <url-pattern>/random/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>refresh</servlet-name>
+        <servlet-class>ResponseRefresh</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>refresh</servlet-name>
+        <url-pattern>/refresh/*</url-pattern>
+    </servlet-mapping>
 </web-app>

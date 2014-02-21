@@ -1,3 +1,5 @@
+package response;
+
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

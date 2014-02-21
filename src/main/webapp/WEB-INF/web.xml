@@ -6,7 +6,7 @@
          version="2.5">
     <servlet>
         <servlet-name>anyName</servlet-name>
-        <servlet-class>HelloServlet</servlet-class>
+        <servlet-class>response.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>anyName</servlet-name>
@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>anyName1</servlet-name>
-        <servlet-class>ResponseDemo1</servlet-class>
+        <servlet-class>response.ResponseDemo1</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>anyName1</servlet-name>
@@ -22,7 +22,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>demo2</servlet-name>
-        <servlet-class>ResponseDemo2</servlet-class>
+        <servlet-class>response.ResponseDemo2</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>demo2</servlet-name>
@@ -30,7 +30,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>randomImg</servlet-name>
-        <servlet-class>RandomImg</servlet-class>
+        <servlet-class>response.RandomImg</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>randomImg</servlet-name>
@@ -38,10 +38,42 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>refresh</servlet-name>
-        <servlet-class>ResponseRefresh</servlet-class>
+        <servlet-class>response.ResponseRefresh</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>refresh</servlet-name>
         <url-pattern>/refresh/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>redirect</servlet-name>
+        <servlet-class>response.ResponseRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>redirect</servlet-name>
+        <url-pattern>/redirect/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>uri</servlet-name>
+        <servlet-class>request.RequestURI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uri</servlet-name>
+        <url-pattern>/uri/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>post</servlet-name>
+        <servlet-class>request.PostMethod</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>post</servlet-name>
+        <url-pattern>/post/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>form</servlet-name>
+        <servlet-class>request.RequestForm</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>form</servlet-name>
+        <url-pattern>/form/*</url-pattern>
     </servlet-mapping>
 </web-app>

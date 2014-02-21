@@ -12,8 +12,10 @@
 </head>
 
 <body>
-    <form action="">
-        用户名：<input type="text" name="username"/><br/>
+    <form action="/post/do" method="post">
+        点击：<a href="/post/do?username=xiaoming?password=wangwu">get</a><br/>
+        用户名1：<input type="text" name="username"/><br/>
+        用户名2：<input type="text" name="username"/><br/>
         密码：<input type="password" name="password"/><br/>
         认证码：<input type="text" name="checkcode"/><img src="/random/img" alt="点击刷新" style="cursor: pointer" onclick="changeImg(this)"><br/>
         <input type="submit" value="注册"/>

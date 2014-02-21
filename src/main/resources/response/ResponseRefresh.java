@@ -1,3 +1,5 @@
+package response;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
@@ -12,13 +14,13 @@ import java.util.Random;
 public class ResponseRefresh extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,IOException {
-        test2(req,resp);
+        test2(req, resp);
     }
 
     private void test2(HttpServletRequest req,HttpServletResponse resp) throws IOException,ServletException {
         String message ="<meta http-equiv='refresh' content='3;url=/index.jsp'>恭喜你，登陆成功，本浏览器将在3秒钟后跳转到主页，如果没有跳转请点击<a href=''>超链接</a>";
         this.getServletContext().setAttribute("message",message);
-        this.getServletContext().getRequestDispatcher("/message.jsp").forward(req,resp);
+        this.getServletContext().getRequestDispatcher("/message.jsp").forward(req, resp);
 
     }
 

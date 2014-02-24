@@ -76,4 +76,28 @@
         <servlet-name>form</servlet-name>
         <url-pattern>/form/*</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>mvc</servlet-name>
+        <servlet-class>request.RequestMVC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc</servlet-name>
+        <url-pattern>/mvc/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>include</servlet-name>
+        <servlet-class>request.RequestInculde</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>include</servlet-name>
+        <url-pattern>/include/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>steal</servlet-name>
+        <servlet-class>request.StealLink</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>steal</servlet-name>
+        <url-pattern>/steal/*</url-pattern>
+    </servlet-mapping>
 </web-app>

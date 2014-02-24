@@ -21,7 +21,7 @@ public class RequestMVC extends HttpServlet{
         //request也可以实现转发
 
         //数据在跳转之前会被清空
-        req.getRequestDispatcher("/message.jsp").forward(req,resp);
+        req.getRequestDispatcher("/message.Jsp").forward(req,resp);
         return;
 
     }

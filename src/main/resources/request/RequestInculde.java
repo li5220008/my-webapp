@@ -13,9 +13,9 @@ import java.io.IOException;
 public class RequestInculde extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/public/head.jsp").include(req, resp);
+        req.getRequestDispatcher("/public/head.Jsp").include(req, resp);
         resp.getWriter().write("hhhllkakall<br/>");
-        req.getRequestDispatcher("/public/foot.jsp").include(req, resp);
+        req.getRequestDispatcher("/public/foot.Jsp").include(req, resp);
     }
 
     @Override

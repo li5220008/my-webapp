@@ -19,6 +19,6 @@ public class RequestForward extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String data = "";
         req.setAttribute("data",data);
-        req.getRequestDispatcher("/index.jsp").forward(req,resp);
+        req.getRequestDispatcher("/index.Jsp").forward(req,resp);
     }
 }

@@ -23,8 +23,8 @@ public class ResponseRedirect extends HttpServlet {
         2，用重定向技术，浏览器地址栏会发生变化
 
         resp.setStatus(302);
-        resp.setHeader("location","/index.jsp");*/
-        resp.sendRedirect("/index.jsp");
+        resp.setHeader("location","/index.Jsp");*/
+        resp.sendRedirect("/index.Jsp");
     }
 
     @Override

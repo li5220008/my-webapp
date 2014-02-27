@@ -23,6 +23,7 @@ my maven web app
         WEB-INF/jsp 保存网站所有jsr
 
     1.3创建代表数据库的xml
+        在类目录下创建一个代表数据库的uers.xml文件
 
 
 

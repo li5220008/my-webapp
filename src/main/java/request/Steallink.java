@@ -9,7 +9,7 @@ import java.io.IOException;
  * Date: 14-2-24
  * Time: 上午11:33
  */
-public class StealLink extends HttpServlet {
+public class Steallink extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String referer = req.getHeader("referer");

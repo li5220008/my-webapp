@@ -11,10 +11,12 @@
     <title></title>
 </head>
 <body>
+
+    data had been clean!
+
     <%
-        String message= (String)application.getAttribute("message");
-        System.out.println(message);
-        out.write(message);
+        String data=(String)request.getAttribute("data");
+        out.write(data);
     %>
 </body>
 </html>

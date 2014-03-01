@@ -1,30 +1,29 @@
-package response;
-
+package request;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Desc:
  * User: weiguili(li5220008@gmail.com)
- * Date: 14-2-21
- * Time: 上午9:02
+ * Date: 14-2-24
+ * Time: 上午9:19
  */
-public class ResponseRedirect extends HttpServlet {
+public class RequestMVC extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        /*resp.getWriter();
-        resp.getWriter();*/
-        /*resp.getOutputStream();
-        resp.getOutputStream();*/
-        /*
-        重定向的特点
-        1，浏览器会向服务器放送两次请求
-        2，用重定向技术，浏览器地址栏会发生变化
+        String data="this my data! ";
+        PrintWriter writer = resp.getWriter();
+        writer.write(data);
+        //writer.close();
+        //req.setAttribute("data", data);
+        //request也可以实现转发
 
-        resp.setStatus(302);
-        resp.setHeader("location","/index.Jsp");*/
-        resp.sendRedirect("/index.Jsp");
+        //数据在跳转之前会被清空
+        req.getRequestDispatcher("/message.Jsp").forward(req,resp);
+        return;
+
     }
 
     @Override

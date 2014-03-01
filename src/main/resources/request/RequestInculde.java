@@ -1,24 +1,25 @@
 package request;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
 
 /**
- * Desc:
+ * Desc:用include 实现页面包含
  * User: weiguili(li5220008@gmail.com)
- * Date: 14-2-21
- * Time: 下午4:55
+ * Date: 14-2-24
+ * Time: 上午10:53
  */
-public class RequestForward extends HttpServlet {
+public class RequestInculde extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req,resp);
+        req.getRequestDispatcher("/public/head.Jsp").include(req, resp);
+        resp.getWriter().write("hhhllkakall<br/>");
+        req.getRequestDispatcher("/public/foot.Jsp").include(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String data = "";
-        req.setAttribute("data",data);
-        req.getRequestDispatcher("/index.Jsp").forward(req,resp);
+        doPost(req, resp);    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

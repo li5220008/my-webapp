@@ -4,6 +4,18 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.ArithmeticException</exception-type>
+        <location>/error/error.jsp</location>
+    </error-page>
     <servlet>
         <servlet-name>anyName</servlet-name>
         <servlet-class>response.HelloServlet</servlet-class>
@@ -75,5 +87,29 @@
     <servlet-mapping>
         <servlet-name>form</servlet-name>
         <url-pattern>/form/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>mvc</servlet-name>
+        <servlet-class>request.RequestMVC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc</servlet-name>
+        <url-pattern>/mvc/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>include</servlet-name>
+        <servlet-class>request.RequestInculde</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>include</servlet-name>
+        <url-pattern>/include/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>steal</servlet-name>
+        <servlet-class>request.StealLink</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>steal</servlet-name>
+        <url-pattern>/steal/*</url-pattern>
     </servlet-mapping>
 </web-app>

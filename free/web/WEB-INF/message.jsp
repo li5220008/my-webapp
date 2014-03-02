@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>网站全局消息页面</title>
 </head>
 <body>
-
+    ${message}
 </body>
 </html>

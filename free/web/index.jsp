@@ -14,7 +14,7 @@
   <body>
   <div style="text-align: right;">
     <c:if test="${user !=null}">
-        欢迎您：${user.name}<a href="/">注销</a>
+        欢迎您：${user.nickname}<a href="/">注销</a>
     </c:if>
     <c:if test="${user ==null}">
         <a href="">注册</a>

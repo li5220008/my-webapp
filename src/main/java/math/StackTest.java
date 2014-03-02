@@ -7,12 +7,12 @@ import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.regex.Pattern;
 
-public class Test {
+public class StackTest {
 
     public static void main(String args[]) {
         //String computeExpr = "1 + 5 * 6 + 3 * (2 + 3*2+2-1+3*3) + 10/5 - 6*1";
         String computeExpr = "1 + 5 * 6 + 3 * (2 + 3*2+2-((1+3)*3)) + 10/5 - 6*1";
-        Test test = new Test();
+        StackTest test = new StackTest();
         double result1 = test.computeWithVector(computeExpr);
         double result2 = test.computeWithStack(computeExpr);
         System.out.println(result1 + "=======" + result2);

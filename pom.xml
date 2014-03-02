@@ -27,6 +27,11 @@
           <artifactId>commons-beanutils</artifactId>
           <version>1.9.1</version>
       </dependency>
+      <!--<dependency>
+          <groupId>commons-beanutils</groupId>
+          <artifactId>commons-beanutils</artifactId>
+          <version>1.6</version>
+      </dependency>-->
 
       <!--解决JSP页面不能识别api问题-->
       <!--<dependency>

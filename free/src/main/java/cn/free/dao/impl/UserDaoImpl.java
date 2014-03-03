@@ -1,16 +1,13 @@
 package cn.free.dao.impl;
 
+import cn.free.dao.UserDao;
 import cn.free.domain.User;
 import cn.free.utils.XmlUtils;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 import org.dom4j.Element;
-import org.dom4j.Node;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * Desc:
@@ -18,7 +15,7 @@ import java.util.logging.SimpleFormatter;
  * Date: 14-2-27
  * Time: 下午3:14
  */
-public class UserDaoImpl {
+public class UserDaoImpl implements UserDao {
     public void add(User user) {
         try {
             Document document = XmlUtils.getDocument();
@@ -26,6 +23,7 @@ public class UserDaoImpl {
             Element userTag = root.addElement("user");
             userTag.addAttribute("id", user.getId());
             userTag.addAttribute("username", user.getUsername());
+            userTag.addAttribute("password", user.getPassword());
             userTag.addAttribute("email", user.getEmail());
             userTag.addAttribute("birthday", user.getBirthday() == null ? "" : user.getBirthday().toLocaleString());
             userTag.addAttribute("nickname", user.getNickname());

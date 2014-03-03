@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: free
-  Date: 14-3-1
-  Time: 下午4:17
+  User: Administrator
+  Date: 14-2-27
+  Time: 下午2:47
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,7 +17,7 @@
         欢迎您：${user.nickname}<a href="/">注销</a>
     </c:if>
     <c:if test="${user ==null}">
-        <a href="">注册</a>
+        <a href="">注册!!</a>
         <a href="${pageContext.request.contextPath}/user/loginUIServlet">登陆</a>
     </c:if>
   </div>

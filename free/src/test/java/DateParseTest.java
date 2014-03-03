@@ -1,5 +1,4 @@
 import org.apache.commons.beanutils.locale.converters.DateLocaleConverter;
-import org.apache.log4j.SimpleLayout;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,8 +13,8 @@ public class DateParseTest {
     public static void main(String[] args) throws ParseException {
         String data = "2014-02-29";
 
-        /*SimpleDateFormat df = new SimpleDateFormat("yyy-MM-dd");
-        df.parse(data);*/
+        SimpleDateFormat df = new SimpleDateFormat("yyy-MM-dd");
+        df.parse(data);
 
         DateLocaleConverter dc = new DateLocaleConverter();
         dc.convert(data);

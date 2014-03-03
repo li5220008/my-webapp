@@ -104,12 +104,12 @@
         <servlet-name>include</servlet-name>
         <url-pattern>/include/*</url-pattern>
     </servlet-mapping>
-    <servlet>
+    <!--<servlet>
         <servlet-name>steal</servlet-name>
         <servlet-class>request.StealLink</servlet-class>
-    </servlet>
-    <servlet-mapping>
+    </servlet>-->
+    <!--<servlet-mapping>
         <servlet-name>steal</servlet-name>
         <url-pattern>/steal/*</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 </web-app>

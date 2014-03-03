@@ -27,6 +27,11 @@
           <artifactId>commons-beanutils</artifactId>
           <version>1.9.1</version>
       </dependency>
+      <!--<dependency>
+          <groupId>commons-beanutils</groupId>
+          <artifactId>commons-beanutils</artifactId>
+          <version>1.6</version>
+      </dependency>-->
 
       <!--解决JSP页面不能识别api问题-->
       <!--<dependency>
@@ -53,12 +58,6 @@
           <groupId>log4j</groupId>
           <artifactId>log4j</artifactId>
           <version>1.2.17</version>
-      </dependency>
-      <!--必须引进这个包，不然无法解析xpath表达式 报告java.lang.NoClassDefFoundError: -->
-      <dependency>
-          <groupId>jaxen</groupId>
-          <artifactId>jaxen</artifactId>
-          <version>1.1.6</version>
       </dependency>
   </dependencies>
   <build>

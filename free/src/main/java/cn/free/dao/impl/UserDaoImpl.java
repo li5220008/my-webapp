@@ -28,7 +28,6 @@ public class UserDaoImpl implements UserDao {
             userTag.addAttribute("birthday", user.getBirthday() == null ? "" : user.getBirthday().toLocaleString());
             userTag.addAttribute("nickname", user.getNickname());
             XmlUtils.write2Xml(document);
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

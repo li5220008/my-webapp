@@ -53,7 +53,6 @@ public class WebUtils {
     public static void copyBean(Object src,Object dest){
         //注册日期转换器
         ConvertUtils.register(new Converter() {
-            @Override
             public Object convert(Class tClass, Object o) {
                 String value = (String)o;
                 if(value==null||"".equals(value.trim())){

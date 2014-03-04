@@ -13,20 +13,20 @@ import java.io.IOException;
  * 处理登陆的请求
  * Created by free on 14-3-2.
  */
-public class loginServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         BusinessServiceImpl service = new BusinessServiceImpl();
         User user = new User();
-        //service.login(usernam, password);
+        user = service.login(username, password);
         if(user !=null){
             resp.sendRedirect("/index.jsp");
             return ;
         }
         req.setAttribute("message","用户不存在，登陆失败！");
-        req.getRequestDispatcher("/message").forward(req,resp);
+        req.getRequestDispatcher("/message.jsp").forward(req,resp);
     }
 
     @Override

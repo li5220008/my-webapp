@@ -10,7 +10,7 @@ import java.io.IOException;
  * 提供登陆提示页面
  * Created by free on 14-3-2.
  */
-public class loginUIServlet extends HttpServlet {
+public class LoginUIServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req,resp);

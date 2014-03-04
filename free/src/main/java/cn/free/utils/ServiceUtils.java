@@ -21,6 +21,7 @@ public class ServiceUtils {
      */
     public static String md5(String message) {
         try {
+            if(message == null) return null;
             //获取一个消息加密算法
             MessageDigest md = MessageDigest.getInstance("md5");
             //把消息转换成字节数组，进行加密

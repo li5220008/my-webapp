@@ -16,6 +16,15 @@ public class User {
     private Date birthday;
     private String nickname;
 
+    /**
+     * private String username;
+     private String password;
+     private String repassword;
+     private String nickname;
+     private String email;
+     private String birthday;
+     private Map erros = new HashMap();*/
+
     public String getId() {
         return id;
     }

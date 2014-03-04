@@ -43,6 +43,7 @@ public class RegisterServlet extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/jsp/register.jsp").forward(req,resp);
             return;
         } catch (Exception e){
+            e.printStackTrace();
             //5，如果注册不成功，并是其他问题引起，则跳转到全局的错误消息页面
             req.setAttribute("message","服务器出现未知错误！");
             req.getRequestDispatcher("/message.jsp").forward(req,resp);
@@ -52,6 +53,8 @@ public class RegisterServlet extends HttpServlet {
         req.setAttribute("message","注册成功！");
         req.getRequestDispatcher("/WEB-INF/message.jsp").forward(req,resp);
     }
+
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

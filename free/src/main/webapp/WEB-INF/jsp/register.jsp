@@ -22,7 +22,7 @@
 </head>
 
 <body>
-<form action="${pageContext.request.contextPath}/user/register/registe" method="post">
+<form action="${pageContext.request.contextPath}/user/register/do" method="post">
     点击：<a href="/post/do?username=xiaoming?password=wangwu">get</a><br/>
     <div class="message">${message}</div>
     用户名：<input type="text" name="username" value="${form.username}"/> <span class="error">${form.errors.username}</span><br/>
@@ -33,7 +33,7 @@
     邮箱：<input type="text" name="email" value="${form.email}" /> <span class="error">${form.errors.email}</span><br/>
     认证码：<input type="text" name="checkcode" value="${form.checkcode}"/><span class="error">${form.errors.checkcode}</span>
     <img src="/random/img" alt="点击刷新" style="cursor: pointer" onclick="changeImg(this)"><br/>
-    <input type="submit" value="注册"/>
+    <input type="submit"  value="注册"/>
 </form>
 </body>
 </html>

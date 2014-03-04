@@ -17,8 +17,8 @@
         欢迎您：${user.nickname}<a href="/">注销</a>
     </c:if>
     <c:if test="${user ==null}">
-        <a href="${pageContext.request.contextPath}/user/register/UI">注册</a>
-        <a href="${pageContext.request.contextPath}/user/loginUIServlet">登陆</a>
+        <a href="${pageContext.request.contextPath}/user/register/ui">注册</a>
+        <a href="${pageContext.request.contextPath}/user/login/ui">登陆</a>
     </c:if>
   </div>
   </body>

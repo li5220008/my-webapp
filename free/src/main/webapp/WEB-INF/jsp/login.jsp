@@ -11,12 +11,11 @@
     <title>登陆页面</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/" method="post">
-    用户名：<input type="text" name="username"/><br/>
-    秘密：<input type="text" name="password"/><br/>
-    验证码：<input type="text" name="checkcode"/><br/>
-    <input type="submit" value="登陆"><input type="button" name="ff" value="注册"/><br/>
-
+<form action="${pageContext.request.contextPath}/user/login/do" method="post">
+    用户名：<input type="text" name="username" value="${user.username}" /><br/>
+    秘密：<input type="text" name="password" value="${user.password}"/><br/>
+    验证码：<input type="text" name="checkcode" /><br/>
+    <input type="submit" value="登陆"><input type="button" onclick="location.href='${pageContext.request.contextPath}/user/register/ui'" value="注册"/><br/>
 </form>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package cn.free.web.controller;
 
 import cn.free.domain.User;
+import cn.free.service.BusinessService;
 import cn.free.service.impl.BusinessServiceImpl;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class LoginServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        BusinessServiceImpl service = new BusinessServiceImpl();
+        BusinessService service = new BusinessServiceImpl();
         User user = new User();
         user = service.login(username, password);
         if(user !=null){

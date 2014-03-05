@@ -4,6 +4,7 @@ import cn.free.dao.UserDao;
 import cn.free.dao.impl.UserDaoImpl;
 import cn.free.domain.User;
 import cn.free.exception.UserExistException;
+import cn.free.service.BusinessService;
 import cn.free.utils.ServiceUtils;
 
 /**
@@ -12,7 +13,7 @@ import cn.free.utils.ServiceUtils;
  * Date: 14-2-28
  * Time: 下午2:14
  */
-public class BusinessServiceImpl {
+public class BusinessServiceImpl implements BusinessService {
 
     //调用数据控制层
     private UserDao dao = new UserDaoImpl();//要实现彻底解耦 1，工厂方法 1，依赖注入（spring guice）

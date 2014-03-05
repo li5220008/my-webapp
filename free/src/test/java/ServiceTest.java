@@ -1,5 +1,6 @@
 import cn.free.domain.User;
 import cn.free.exception.UserExistException;
+import cn.free.service.BusinessService;
 import cn.free.service.impl.BusinessServiceImpl;
 import junit.framework.TestCase;
 
@@ -21,12 +22,12 @@ public class ServiceTest extends TestCase {
         user.setBirthday(new Date());
         user.setNickname("笨蛋");
 
-        BusinessServiceImpl service = new BusinessServiceImpl();
+        BusinessService service = new BusinessServiceImpl();
         service.register(user);
     }
 
     public void testLogin() {
-        BusinessServiceImpl service = new BusinessServiceImpl();
+        BusinessService service = new BusinessServiceImpl();
         User user = service.login("kk1", "123");
         System.out.println(user);
     }

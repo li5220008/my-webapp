@@ -1,6 +1,7 @@
 package cn.free.web.controller;
 import cn.free.domain.User;
 import cn.free.exception.UserExistException;
+import cn.free.service.BusinessService;
 import cn.free.service.impl.BusinessServiceImpl;
 import cn.free.utils.WebUtils;
 import cn.free.web.formbean.RegisterForm;
@@ -33,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
         User user = new User();
         WebUtils.copyBean(form,user); //bean之间拷贝。
         user.setId(WebUtils.generateID());
-        BusinessServiceImpl service = new BusinessServiceImpl();
+        BusinessService service = new BusinessServiceImpl();
         try {
             service.register(user);
         } catch (UserExistException e) {

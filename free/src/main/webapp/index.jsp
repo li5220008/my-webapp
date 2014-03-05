@@ -14,7 +14,7 @@
   <body>
   <div style="text-align: right;">
     <c:if test="${user !=null}">
-        欢迎您：${user.nickname}<a href="/">注销</a>
+        欢迎您：${user.nickname}<a href="${pageContext.request.contextPath}/user/logout/do">注销</a>
     </c:if>
     <c:if test="${user ==null}">
         <a href="${pageContext.request.contextPath}/user/register/ui">注册</a>

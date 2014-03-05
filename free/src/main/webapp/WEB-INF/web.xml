@@ -36,4 +36,12 @@
         <servlet-name>registe</servlet-name>
         <url-pattern>/user/register/do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>cn.free.web.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/user/logout/do</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -16,17 +16,25 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         BusinessServiceImpl service = new BusinessServiceImpl();
         User user = new User();
         user = service.login(username, password);
         if(user !=null){
-            resp.sendRedirect("/index.jsp");
+            req.getSession().setAttribute("user",user);
+            resp.sendRedirect(req.getContextPath()+"/index.jsp");
             return ;
         }
+        /*user.setUsername(username);
+        user.setPassword(password);
+        req.setAttribute("error","用户名或密码错误！");
+        req.setAttribute("user",user);
+        req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req,resp);*/
+
         req.setAttribute("message","用户不存在，登陆失败！");
-        req.getRequestDispatcher("/message.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/message.jsp").forward(req,resp);
     }
 
     @Override

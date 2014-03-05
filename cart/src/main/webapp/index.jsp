@@ -11,6 +11,6 @@
     <title></title>
   </head>
   <body>
-        hello cart!
+        <a href="${pageContext.request.contextPath}/book/list">浏览书籍</a>
   </body>
 </html>

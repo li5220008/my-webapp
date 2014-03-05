@@ -11,7 +11,7 @@ my maven web app
         log4j开发包
 
     1.2创建程序包
-        cn.free.DB
+        cn.free.db
         cn.free.domain
         cn.free.dao
         cn.free.dao.impl

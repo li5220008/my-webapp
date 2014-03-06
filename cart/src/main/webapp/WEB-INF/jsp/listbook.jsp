@@ -36,7 +36,7 @@
                 <td>${entry.value.author}</td>
                 <td>${entry.value.price}</td>
                 <td>${entry.value.description}</td>
-                <td><a href="${pageContext.request.contextPath}/book/buy?id=${entry.value.id}" target="_blank">购买</a><a>删除</a></td>
+                <td><a href="${pageContext.request.contextPath}/book/buy?id=${entry.value.id}" target="_blank">购买</a></td>
             </tr>
         </c:forEach>
     </table>

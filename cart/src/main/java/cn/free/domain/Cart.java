@@ -19,6 +19,7 @@ public class Cart {
             item=new CartItem();
             item.setBook(book);
             map.put(book.getId(),item);
+            item.setQuantity(1);
         } else {
             item.setQuantity(item.getQuantity() + 1);
             /*this.price += book.getPrice();*/

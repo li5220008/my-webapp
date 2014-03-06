@@ -2,6 +2,8 @@ package cn.free.service.impl;
 
 import cn.free.dao.impl.BookDao;
 import cn.free.domain.Book;
+import cn.free.domain.Cart;
+import cn.free.domain.CartItem;
 
 import java.util.Map;
 
@@ -18,6 +20,14 @@ public class BusinessService {
     }
     public Book findBook(String id){
         return dao.findBook(id);
+    }
+    //删除购物车中的购物项
+    public void deleteBook(String id,Cart cart){
+        cart.getMap().remove(id);
+    }
+
+    public void clearCart(Cart cart){
+        cart.getMap().clear();
     }
 
 }

@@ -17,11 +17,29 @@
             table-layout : fixed;
         }
     </style>
+    <script type="text/javascript">
+        function deleteConfirm(id){
+            var confirm = window.confirm("您确定删除吗？");
+            if(confirm){
+                window.location.href="${pageContext.request.contextPath}/book/delete?id="+id;
+            }
+        }
+        function clearCart(id){
+            var confirm = window.confirm("确定要清空购物车吗？");
+            if(confirm){
+                window.location.href="${pageContext.request.contextPath}/book/clear";
+            }
+        }
+    </script>
     <title>购物车</title>
 </head>
 <body>
 <h1>购物车列表</h1>
-<table class="table">
+<c:if test="${empty(cart.map)}">
+    <tr><td>您没有购买任何商品！</td></tr>
+</c:if>
+<c:if test="${!empty(cart.map)}">
+    <table class="table">
     <tr>
         <th>书名</th>
         <th>作者</th>
@@ -37,13 +55,15 @@
             <td>${entry.value.book.price}</td>
             <td>${entry.value.quantity}</td>
             <td>${entry.value.price}</td>
-            <td><a href="">删除</a></td>
+            <td><a  href="javascript:void(0);" onclick="deleteConfirm(${entry.value.book.id})"> 删除</a></td> <%--去掉超链接的默认行为--%>
         </tr>
     </c:forEach>
         <tr>
             <td colspan="3">总价</td>
-            <td colspan="3">${cart.price}</td>
+            <td colspan="2">${cart.price}</td>
+            <td colspan="1"><a href="javascript:void(0);" onclick="clearCart()">清空购物车</a></td>
         </tr>
 </table>
+</c:if>
 </body>
 </html>
